@@ -23,17 +23,17 @@
 
         public static void Information(string message)
         {
-            EventLog.WriteEntry(EventSource, message, EventLogEntryType.Information);
+        //    EventLog.WriteEntry(EventSource, message, EventLogEntryType.Information);
         }
 
         public static void Warning(string message)
         {
-            EventLog.WriteEntry(EventSource, message, EventLogEntryType.Warning);
+     //      EventLog.WriteEntry(EventSource, message, EventLogEntryType.Warning);
         }
 
         public static void Error(string message)
         {
-            EventLog.WriteEntry(EventSource, message, EventLogEntryType.Error);            
+       //     EventLog.WriteEntry(EventSource, message, EventLogEntryType.Error);            
         }
     }
 }

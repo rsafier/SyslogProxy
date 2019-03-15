@@ -15,8 +15,8 @@ namespace SyslogProxy
         public void Start(string[] args)
         {
             var writer = new SeqWriter();
-            new Proxy(async message => await writer.WriteToSeq(new JsonSyslogMessage(message)).ConfigureAwait(false), 
-                this.cancellationTokenSource.Token);
+            new Proxy(async message => await writer.WriteToSeq(new JsonSyslogMessage(message)).ConfigureAwait(false) ,
+                this.cancellationTokenSource.Token, Configuration.ProxyMode);
         }
 
         public void Stop()

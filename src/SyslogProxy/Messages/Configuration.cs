@@ -29,6 +29,13 @@
                 return IntOrDefault(ConfigurationManager.AppSettings["ProxyPort"], 6514);
             }
         }
+        public static ProxyMode ProxyMode
+        {
+            get
+            {
+                return (ProxyMode)Enum.Parse(typeof(ProxyMode), ConfigurationManager.AppSettings["ProxyMode"]);
+            }
+        }
 
         public static int TcpConnectionTimeout
         {
